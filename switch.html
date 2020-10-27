@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>SWITCH</title>
+	<script type="text/javascript">
+		
+			function changeSwitch(){
+			var sign = document.getElementById("sayn");
+		
+			var toggleButton = document.getElementById("switchLights");
+			var toggleButton2 = document.getElementById("switchLights2");
+			var toggleButton3 = document.getElementById("switchLights3");
+			
+			if (toggleButton.innerHTML === "GO"){
+				toggleButton.classList.toggle("buttonToggle");
+				toggleButton2.classList.remove("buttonToggle2");
+				toggleButton3.classList.remove("buttonToggle3");
+				sayn.innerHTML = "GO";
+								
+				
+			}
+			else{
+				
+			}
+		}
+
+		function changeSwitch2(){		
+
+			var toggleButton = document.getElementById("switchLights");
+			var toggleButton2 = document.getElementById("switchLights2");
+			var toggleButton3 = document.getElementById("switchLights3");
+
+
+			if (toggleButton2.innerHTML === "READY"){
+				toggleButton2.classList.toggle("buttonToggle2");
+				toggleButton.classList.remove("buttonToggle");
+				toggleButton3.classList.remove("buttonToggle3");
+				sayn.innerHTML = "READY";
+				
+
+			}
+			else{
+
+			}
+		}
+		function changeSwitch3(){		
+		
+			
+
+			var toggleButton = document.getElementById("switchLights");
+			var toggleButton2 = document.getElementById("switchLights2");
+			var toggleButton3 = document.getElementById("switchLights3");
+				
+
+			if (toggleButton3.innerHTML === "STOP"){
+				toggleButton3.classList.toggle("buttonToggle3");
+				toggleButton.classList.remove("buttonToggle");
+				toggleButton2.classList.remove("buttonToggle2");
+				sayn.innerHTML = "STOP";
+
+
+			}
+			else{}
+				
+		}
+		
+	</script>
+
+	<style type="text/css">
+		p{
+			font-size: 50px;
+		}
+		button{
+			height: 200px;
+			width: 200px;
+			border-radius: 100%;
+			color: black;
+			background-color: black;
+		}
+		.buttonToggle{
+			color: white;
+			background-color: green;
+
+		}
+		.buttonToggle2{
+			color: white;
+			background-color: orange;
+		}
+		.buttonToggle3{
+			color: white;
+			background-color: red;
+		}
+	</style>
+</head>
+<body>
+	<p id="sayn">Stap Layt</p>
+	<button id="switchLights" onclick="changeSwitch()">GO</button>
+	<br>
+	<button id="switchLights2" onclick="changeSwitch2()">READY</button>
+	<br>
+	<button id="switchLights3" onclick="changeSwitch3()">STOP</button>
+</body>
+</html>
